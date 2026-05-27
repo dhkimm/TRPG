@@ -1,0 +1,107 @@
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.chatTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+.downloadBtn {
+  background: transparent;
+  color: var(--text-faint);
+  font-size: 11px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+}
+.downloadBtn:hover:not(:disabled) {
+  color: var(--text-muted);
+  border-color: var(--border-bright);
+  background: transparent;
+}
+
+.log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.msg {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  line-height: 1.5;
+}
+
+.name {
+  font-weight: 700;
+  color: var(--gold);
+  white-space: nowrap;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+.text { flex: 1; font-size: 0.88rem; color: var(--text); word-break: break-word; }
+.time { font-size: 0.72rem; color: var(--text-faint); white-space: nowrap; }
+
+.gm .name { color: var(--text-muted); }
+.gm .text { color: var(--text-muted); font-style: italic; font-size: 0.85rem; }
+
+.whisper .name { color: var(--whisper); }
+.whisper .text { color: #a07ec8; font-style: italic; }
+
+.dice .name { color: var(--dice); }
+.dice .text { color: var(--dice); font-family: 'Nanum Myeongjo', monospace; font-size: 0.86rem; }
+
+.help {
+  display: flex;
+  gap: 14px;
+  padding: 5px 14px;
+  font-size: 10px;
+  color: var(--text-faint);
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.inputRow {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-panel);
+  flex-shrink: 0;
+}
+
+.input { flex: 1; }
+
+.sendBtn {
+  background: var(--gold-dim);
+  color: var(--bg-root);
+  font-weight: 700;
+  padding: 6px 16px;
+  border: 1px solid var(--gold-dim);
+}
+.sendBtn:hover:not(:disabled) {
+  background: var(--gold);
+  color: var(--bg-root);
+  border-color: var(--gold);
+}

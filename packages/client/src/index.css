@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-root:    #0b0907;
+  --bg-panel:   #13100a;
+  --bg-card:    #1a1610;
+  --bg-hover:   #231f14;
+  --bg-input:   #100e08;
+
+  --border:        #2e270e;
+  --border-bright: #5a4a18;
+  --border-gold:   rgba(201,168,76,0.35);
+
+  --text:       #e2d5b5;
+  --text-muted: #8a7e60;
+  --text-faint: #4a4330;
+
+  --gold:        #c9a84c;
+  --gold-bright: #e8c96a;
+  --gold-dim:    #7a6428;
+
+  --crimson:        #9b2335;
+  --crimson-bright: #c0392b;
+
+  --hp-full:  #4a8c5c;
+  --hp-mid:   #b8860b;
+  --hp-low:   #9b2335;
+
+  --dice:    #d4951e;
+  --whisper: #7a4fa8;
+  --system:  #5a6a7a;
+
+  --radius: 6px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg-root);
+  color: var(--text);
+  font-family: 'Nanum Myeongjo', 'Noto Serif KR', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-panel); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold-dim); }
+
+/* 기본 버튼 */
+button {
+  cursor: pointer;
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius);
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+button:hover:not(:disabled) {
+  color: var(--gold);
+  border-color: var(--gold-dim);
+  background: var(--bg-hover);
+}
+button:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* 기본 인풋 */
+input, select, textarea {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 6px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--gold-dim);
+  box-shadow: 0 0 0 2px rgba(201,168,76,0.12);
+}
+select option { background: var(--bg-card); }
+
+/* 구분선 */
+hr { border: none; border-top: 1px solid var(--border); }
+
+/* 패널 공통 */
+.panel-title {
+  font-family: 'Cinzel', 'Nanum Myeongjo', serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}

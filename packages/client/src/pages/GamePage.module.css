@@ -1,0 +1,127 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg-root);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 20px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-gold);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.roomName {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold);
+  flex: 1;
+  letter-spacing: 0.06em;
+}
+
+.myName {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.inviteBtn {
+  background: transparent;
+  border: 1px solid var(--border-bright);
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 4px 12px;
+}
+.inviteBtn:hover:not(:disabled) {
+  color: var(--gold);
+  border-color: var(--gold-dim);
+  background: transparent;
+}
+
+.leaveBtn {
+  background: transparent;
+  border: 1px solid var(--crimson);
+  color: var(--crimson);
+  font-size: 12px;
+  padding: 4px 12px;
+}
+.leaveBtn:hover:not(:disabled) {
+  background: rgba(155,35,53,0.15);
+  color: var(--crimson-bright);
+  border-color: var(--crimson-bright);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 왼쪽 사이드바 */
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sidebarTabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 9px 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--text-faint);
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tabBtn:hover:not(:disabled) {
+  color: var(--text-muted);
+  background: transparent;
+  border-color: transparent;
+}
+
+.tabActive {
+  color: var(--gold) !important;
+  border-bottom-color: var(--gold) !important;
+  background: transparent !important;
+}
+
+.sidebarContent {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 오른쪽 채팅 */
+.chatPanel {
+  width: 300px;
+  min-width: 300px;
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}

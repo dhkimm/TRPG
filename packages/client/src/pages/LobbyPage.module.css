@@ -1,0 +1,115 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-root);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border-gold);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  flex: 1;
+  letter-spacing: 0.08em;
+}
+
+.username { font-size: 0.88rem; color: var(--text-muted); }
+
+.logoutBtn {
+  background: transparent;
+  border: 1px solid var(--border-bright);
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 4px 12px;
+}
+.logoutBtn:hover:not(:disabled) { color: var(--text); border-color: var(--border-bright); background: var(--bg-hover); }
+
+.content {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+.card:first-child { flex: 1; }
+
+.side { display: flex; flex-direction: column; gap: 16px; width: 300px; }
+
+.empty { color: var(--text-faint); font-size: 0.9rem; }
+
+.roomList { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+.roomItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.roomItem:hover { border-color: var(--gold-dim); background: var(--bg-hover); }
+
+.roomName { font-weight: 600; flex: 1; color: var(--text); }
+.roomMeta { font-size: 0.78rem; color: var(--text-faint); }
+
+.joinBtn {
+  background: var(--gold-dim);
+  color: var(--bg-root);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-color: var(--gold-dim);
+  font-weight: 600;
+}
+.joinBtn:hover:not(:disabled) { background: var(--gold); border-color: var(--gold); color: var(--bg-root); }
+
+.error { color: var(--crimson-bright); font-size: 13px; }
+
+.btnPrimary {
+  background: var(--gold-dim);
+  color: var(--bg-root);
+  font-weight: 700;
+  padding: 9px;
+  border-color: var(--gold-dim);
+}
+.btnPrimary:hover:not(:disabled) { background: var(--gold); border-color: var(--gold); color: var(--bg-root); }
+
+.btnSecondary {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  padding: 9px;
+  border: 1px solid var(--border-bright);
+}
+.btnSecondary:hover:not(:disabled) { color: var(--gold); border-color: var(--gold-dim); background: var(--bg-hover); }

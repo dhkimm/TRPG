@@ -1,0 +1,75 @@
+.panel {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+}
+
+.diceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.diceBtn {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-family: 'Cinzel', serif;
+  padding: 7px 4px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-bright);
+  letter-spacing: 0.04em;
+}
+.diceBtn:hover:not(:disabled) {
+  color: var(--gold);
+  border-color: var(--gold-dim);
+  background: var(--bg-hover);
+}
+
+.diceBtn.active {
+  background: var(--gold-dim);
+  color: var(--bg-root);
+  font-weight: 700;
+  border-color: var(--gold-dim);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.controls input { width: 100%; }
+
+.rollBtn {
+  background: var(--gold-dim);
+  color: var(--bg-root);
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Cinzel', serif;
+  padding: 10px;
+  border: 1px solid var(--gold-dim);
+  letter-spacing: 0.06em;
+}
+.rollBtn:hover:not(:disabled) {
+  background: var(--gold);
+  color: var(--bg-root);
+  border-color: var(--gold);
+}

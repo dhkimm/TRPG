@@ -1,0 +1,15 @@
+{
+  "name": "trpg-online",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names \"서버,클라이언트\" --prefix-colors \"cyan,magenta\" \"pnpm --filter @trpg/server dev\" \"pnpm --filter @trpg/client dev\"",
+    "build": "pnpm --filter \"./packages/*\" build",
+    "lint": "pnpm --filter \"./packages/*\" lint"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
